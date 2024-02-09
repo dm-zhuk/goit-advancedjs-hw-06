@@ -9,4 +9,5 @@ let literal: "enable" | "disable";
 console.log((union = "Text"));
 console.log((union = 10));
 console.log((literal = "enable"));
+
 export {};

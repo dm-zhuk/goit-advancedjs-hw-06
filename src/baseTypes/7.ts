@@ -3,29 +3,21 @@
   і повертає boolean значення, що вказує, чи це день робочий чи вихідний.
 */
 
-const enum DaysOfWeek {
-  MONDAY = "monday",
-  TUESDAY = "tuesday",
-  WEDNESDAY = "wednesday",
-  THURSDAY = "thursday",
-  FRIDAY = "friday",
-  SATURDAY = "saturday",
-  SUNDAY = "sunday",
+enum DayOfWeek {
+  Mon = "Monday",
+  Tue = "Tuesday",
+  Wed = "Wednesday",
+  Thu = "Thursday",
+  Fri = "Friday",
+  Sat = "Saturday",
+  Sun = "Sunday",
 }
 
-// console.log(DaysOfWeek.MONDAY);
+const isWeekend = (day: DayOfWeek): boolean => {
+  return day === DayOfWeek.Sat || day === DayOfWeek.Sun;
+};
 
-function isWeekend(day: DaysOfWeek): boolean {
-  switch (day) {
-    case DaysOfWeek.SATURDAY:
-    case DaysOfWeek.SUNDAY:
-      return true;
-    default:
-      return false;
-  }
-}
-
-console.log(isWeekend(DaysOfWeek.THURSDAY)); // false
-console.log(isWeekend(DaysOfWeek.SATURDAY)); // true
+console.log(isWeekend(DayOfWeek.Sat)); // true
+console.log(isWeekend(DayOfWeek.Thu)); // false
 
 export {};
