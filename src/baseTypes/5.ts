@@ -3,5 +3,10 @@
   І так само визначте змінну, яка може приймати тільки одне з двох рядкових значень: 'enable' або 'disable' (literal type)?
 */
 
-let union;
-let literal;
+let union: string | number;
+let literal: "enable" | "disable";
+
+console.log((union = "Text"));
+console.log((union = 10));
+console.log((literal = "enable"));
+export {};
